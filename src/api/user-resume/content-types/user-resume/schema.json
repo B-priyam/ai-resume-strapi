@@ -92,6 +92,19 @@
       "type": "component",
       "repeatable": true,
       "component": "certificate.certificate"
+    },
+    "resumeSections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "resume-sections.resume-sections"
+    },
+    "resumeSection": {
+      "type": "json"
+    },
+    "language": {
+      "type": "component",
+      "repeatable": true,
+      "component": "language.language"
     }
   }
 }

@@ -54,6 +54,16 @@ export interface ExperienceExperience extends Struct.ComponentSchema {
   };
 }
 
+export interface LanguageLanguage extends Struct.ComponentSchema {
+  collectionName: 'components_language_languages';
+  info: {
+    displayName: 'Language';
+  };
+  attributes: {
+    languageName: Schema.Attribute.String;
+  };
+}
+
 export interface ProjectProject extends Struct.ComponentSchema {
   collectionName: 'components_project_projects';
   info: {
@@ -63,6 +73,26 @@ export interface ProjectProject extends Struct.ComponentSchema {
     projectDescription: Schema.Attribute.Text;
     projectName: Schema.Attribute.String;
     projectUrl: Schema.Attribute.String;
+  };
+}
+
+export interface ResumeSectionsResumeSections extends Struct.ComponentSchema {
+  collectionName: 'components_resume_sections_resume_sections';
+  info: {
+    displayName: 'ResumeSections';
+  };
+  attributes: {
+    resumeSections: Schema.Attribute.Enumeration<
+      [
+        '"Skills"',
+        '"Professional Summary"',
+        '"Projects"',
+        '"Education"',
+        '"Experience"',
+        '"Certifications"',
+        '"Achievements"',
+      ]
+    >;
   };
 }
 
@@ -84,7 +114,9 @@ declare module '@strapi/strapi' {
       'certificate.certificate': CertificateCertificate;
       'education.education': EducationEducation;
       'experience.experience': ExperienceExperience;
+      'language.language': LanguageLanguage;
       'project.project': ProjectProject;
+      'resume-sections.resume-sections': ResumeSectionsResumeSections;
       'skills.skills': SkillsSkills;
     }
   }

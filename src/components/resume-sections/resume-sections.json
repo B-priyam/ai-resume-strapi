@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_resume_sections_resume_sections",
+  "info": {
+    "displayName": "ResumeSections"
+  },
+  "options": {},
+  "attributes": {
+    "resumeSections": {
+      "type": "enumeration",
+      "enum": [
+        "\"Skills\"",
+        "\"Professional Summary\"",
+        "\"Projects\"",
+        "\"Education\"",
+        "\"Experience\"",
+        "\"Certifications\"",
+        "\"Achievements\""
+      ]
+    }
+  }
+}

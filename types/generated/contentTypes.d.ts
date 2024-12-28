@@ -393,6 +393,7 @@ export interface ApiUserResumeUserResume extends Struct.CollectionTypeSchema {
     firstName: Schema.Attribute.String;
     github: Schema.Attribute.String;
     jobTitle: Schema.Attribute.String;
+    language: Schema.Attribute.Component<'language.language', true>;
     lastName: Schema.Attribute.String;
     linkedIn: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -406,6 +407,11 @@ export interface ApiUserResumeUserResume extends Struct.CollectionTypeSchema {
     project: Schema.Attribute.Component<'project.project', true>;
     publishedAt: Schema.Attribute.DateTime;
     resumeId: Schema.Attribute.String & Schema.Attribute.Required;
+    resumeSection: Schema.Attribute.JSON;
+    resumeSections: Schema.Attribute.Component<
+      'resume-sections.resume-sections',
+      true
+    >;
     skills: Schema.Attribute.Component<'skills.skills', true>;
     summery: Schema.Attribute.Text;
     template: Schema.Attribute.String;
